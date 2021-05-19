@@ -18,7 +18,7 @@ Project is created with:
 To run this project, install it locally using npm:
 
 ```
-$ git clone 
+$ git clone https://github.com/GeorgeMarych/scandiweb-test
 $ cd scandiweb-test
 $ npm install
 $ npm start
