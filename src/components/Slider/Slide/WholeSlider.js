@@ -2,9 +2,12 @@
 import React from 'react';
 import { css,jsx } from '@emotion/react';
 
-const WholeSlider=({translate,transition,width,onTouchMove,onTouchEnd,children}) =>{
+const WholeSlider=({translate,transition,width,onTouchMove,onTouchEnd,children,onMouseMove,onMouseDown,onMouseUp}) =>{
     return (
         <div
+            onMouseDown={onMouseDown}
+            onMouseUp={onMouseUp}
+            onMouseMove={onMouseMove}
             onTouchMove={onTouchMove}
             onTouchEnd={onTouchEnd}
             css={css`
@@ -13,6 +16,9 @@ const WholeSlider=({translate,transition,width,onTouchMove,onTouchEnd,children})
             height: 100%;   
             width: ${width}px;
             display: flex;
+            :active{
+                cursor : pointer;
+            }
         `}
         >
             {children}
